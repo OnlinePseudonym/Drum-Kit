@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/app.js';
+import DrumMachine from './components/drum_machine.js';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<DrumMachine />, document.getElementById('root'));

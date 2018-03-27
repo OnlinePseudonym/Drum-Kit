@@ -1,3 +1,7 @@
+:root {
+  --primary: #fff;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,4 +13,80 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+  min-height: 100vh;
+  background: url('images/drums.jpg') center center;
+  background-size: cover;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background: #111111a1;
+}
+
+.drum-machine {
+  width: 100%;
+  max-width: 320px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.display {
+  grid-column: 1 / -1;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  font-size: 3rem;
+  height: 100px;
+}
+
+.pad {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-size: 2rem;
+  height: 100px;
+  transform: scale(1);
+  transition: all .3s;
+}
+
+.played {
+  transform: scale(1.1);
+  border: 2px solid #3ec1a3;
+}
+
+@media only screen and (min-width: 400px) {
+  .drum-machine {
+    max-width: calc(300px + 4rem);
+    grid-gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .drum-machine {
+    max-width: calc(150px * 3 + 1rem * 2);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1rem;
+  }
+  .display { height: 150px; }
+  .pad { height: 150px; }
+}
+
+@media only screen and (min-width: 800px) {
+  .drum-machine {
+    max-width: calc(75px * 9 + .75rem * 8);
+    grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+    grid-gap: .75rem;
+  }
+  .display { height: 75px; }
+  .pad { height: 75px; }
 }
