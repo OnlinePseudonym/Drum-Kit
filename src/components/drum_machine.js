@@ -39,8 +39,7 @@ class DrumMachine extends Component {
     ]
 
     handleKeyPress(e) {
-        console.log(e.key);
-        const el = document.getElementById(e.key.toUpperCase());
+        const el = document.getElementById(String.fromCharCode(e.keyCode));
         if (!el) return;
         this.playSound(el);
         this.setState({
