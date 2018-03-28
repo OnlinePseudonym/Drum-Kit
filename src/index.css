@@ -47,7 +47,7 @@ body {
   height: 100px;
 }
 
-.pad {
+.drum-pad {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -78,7 +78,7 @@ body {
     grid-gap: 1rem;
   }
   .display { height: 150px; }
-  .pad { height: 150px; }
+  .drum-pad { height: 150px; }
 }
 
 @media only screen and (min-width: 800px) {
