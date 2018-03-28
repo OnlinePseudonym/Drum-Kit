@@ -75,8 +75,8 @@ class DrumMachine extends Component {
 
     render() {
         return (
-            <div id="drum-machine" class="drum-machine">
-                <div class="display" id="display">{this.state.lastDrum}</div>
+            <div id="drum-machine" className="drum-machine">
+                <div className="display" id="display">{this.state.lastDrum}</div>
                 {this.getDrumPads()}
             </div>
         )
